@@ -1,3 +1,39 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.eot');
+  src: local('Roboto'), local('Roboto-Regular'),
+    url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Regular.woff') format('woff'),
+    url('../fonts/Roboto-Regular.woff2') format('woff2'),
+    url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.eot');
+  src: local('Roboto'), local('Roboto-Medium'),
+    url('Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Medium.woff') format('woff'),
+    url('../fonts/Roboto-Medium.woff2') format('woff2'),
+    url('../fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Bold.eot');
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+    url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Bold.woff') format('woff'),
+    url('../fonts/Roboto-Bold.woff2') format('woff2'),
+    url('../fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 /* reset css */
 *,
 *::before,
@@ -66,9 +102,9 @@ input {
 .grid {
   display: grid;
   grid-template-areas:
-    'my-header my-header'
-    'my-aside my-main'
-    'my-aside my-main';
+    'my-header my-header my-header'
+    'my-aside my-main my-main'
+    'my-aside my-main my-main';
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: 8rem 0;
 }
@@ -87,6 +123,7 @@ input {
 .header__logo {
   font-weight: 700;
   font-size: 6.4rem;
+  line-height: 1.17;
   margin-right: 7rem;
 }
 
@@ -95,11 +132,13 @@ input {
 }
 
 .header__nav a {
+  font-weight: 500;
   font-size: 2.4rem;
+  line-height: 1.17;
 }
 
 .header__nav a:not(:last-child) {
-  margin-right: 2rem;
+  margin-right: 2.4rem;
 }
 
 .header__find {
@@ -120,8 +159,8 @@ input {
   border-radius: 0.8rem;
   padding-left: 1rem;
   padding-right: 4.8rem;
-  font-weight: 400;
   font-size: 2rem;
+  line-height: 1.15;
   color: #ffffff;
 }
 
@@ -132,23 +171,259 @@ input {
 }
 
 .header__date {
-  font-weight: 400;
   text-align: center;
   margin-right: 8.6rem;
 }
 
 .header__hour {
   font-size: 2rem;
+  line-height: 1.15;
 }
 
 .header__day {
   font-size: 1.2rem;
+  line-height: 1.17;
 }
 
 .header__personal {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
+}
+
+.main-display__trailer {
+  position: relative;
+  width: 100%;
+  height: 20.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/back-trailer.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1.6rem;
+  font-weight: 700;
+  padding: 1.9rem;
+}
+
+.main-display__views {
+  font-size: 1.6rem;
+  line-height: 1.19;
+}
+
+.main-display__header {
+  font-size: 2.4rem;
+  line-height: 1.17;
+  padding-bottom: 0.5rem;
+}
+
+.main-display__date {
+  font-size: 1.4rem;
+  line-height: 1.14;
+}
+
+.button-play__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8.1rem;
+  height: 8.1rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button-paly {
+  width: 0;
+  height: 0;
+  padding: 0;
+  border-top: 1.5rem solid transparent;
+  border-left: 2.5rem solid #ffffff;
+  border-bottom: 1.5rem solid transparent;
+  background: transparent;
+  border-radius: 0.2rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.5rem 0;
+}
+
+.title__left,
+.title__right {
+  display: flex;
+  align-items: center;
+}
+
+.title__main,
+.title__count {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.title__main {
+  font-weight: 400;
+  margin-right: 2rem;
+}
+
+.title__count {
+  padding-top: 0.3rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.title__right span {
+  font-size: 1.4rem;
+  line-height: 1.14;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.title__right img {
+  width: 1rem;
+  height: 1.5rem;
+  object-fit: contain;
+  margin-left: 0.4rem;
+}
+
+.trending,
+.popular {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.6rem;
+}
+
+.trending__item {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 48%;
+  height: 25.1rem;
+  border-radius: 1.6rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/trading-item-back.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.trending__plash {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 1.4rem;
+  line-height: 1.14;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 1.6rem;
+  padding: 0.5rem 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.trending__plash img {
+  width: 1.4rem;
+  margin-left: 0.5rem;
+}
+
+.trending__footer,
+.popular__footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.8rem;
+  padding-left: 6.4rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 1.6rem;
+}
+
+.trending__header {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  padding: 0.2rem;
+}
+
+.trending__date {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.trending__time {
+  background: #ffffff;
+  border-radius: 1.6rem;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.14;
+  color: #000000;
+  padding: 0.5rem 1.2rem;
+}
+
+.small {
+  width: 3rem;
+  height: 3rem;
+  left: 7%;
+}
+
+.button-play__wrap.small .button-paly {
+  border-top: 0.5rem solid transparent;
+  border-left: 1rem solid #ffffff;
+  border-bottom: 0.5rem solid transparent;
+}
+
+.popular__item {
+  display: flex;
+  align-items: flex-end;
+  width: 30%;
+  height: 19.2rem;
+  border-radius: 1.6rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/popular-item-back.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.popular__footer {
+  padding: 0.8rem;
+  padding-left: 4.7rem;
+}
+
+.small-plus {
+  width: 1.8rem;
+  height: 1.8rem;
+  left: 9%;
+}
+
+.button-play__wrap.small-plus .button-paly {
+  border-top: 0.3rem solid transparent;
+  border-left: 0.6rem solid #ffffff;
+  border-bottom: 0.3rem solid transparent;
+}
+
+.popular__header,
+.popular__rating {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.popular__date {
+  font-size: 0.8rem;
+  line-height: 1.13;
+}
+
+.popular__rating {
+  display: flex;
+  align-items: center;
+}
+
+.popular__img {
+  margin-right: 0.4rem;
 }
 
 /* сетка */
