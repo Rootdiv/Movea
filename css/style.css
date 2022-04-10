@@ -199,7 +199,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/back-trailer.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/back-trailer.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -231,7 +231,7 @@ input {
   transform: translate(-50%, -50%);
   width: 8.1rem;
   height: 8.1rem;
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -308,7 +308,7 @@ input {
   width: 48%;
   height: 25.1rem;
   border-radius: 1.6rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/trading-item-back.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/trading-item-back.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -342,7 +342,7 @@ input {
   padding: 1.8rem;
   padding-left: 6.4rem;
   font-weight: 700;
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: 1.6rem;
 }
 
@@ -386,7 +386,7 @@ input {
   width: 30%;
   height: 19.2rem;
   border-radius: 1.6rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/popular-item-back.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/popular-item-back.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
