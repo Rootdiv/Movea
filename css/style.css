@@ -43,7 +43,7 @@
 
 html,
 body {
-  background: #17161b;
+  background-color: #17161b;
   color: #ffffff;
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
@@ -112,7 +112,7 @@ input {
 .grid-init {
   position: relative;
   max-width: 144rem;
-  padding: 3rem 2.4rem 4rem;
+  padding: 3rem 2.4rem 4rem 0;
   margin: auto;
 }
 
@@ -231,7 +231,7 @@ input {
   transform: translate(-50%, -50%);
   width: 8.1rem;
   height: 8.1rem;
-  background: rgba(255, 255, 255, 0.07);
+  background-color: rgba(255, 255, 255, 0.07);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -247,7 +247,7 @@ input {
   border-top: 1.5rem solid transparent;
   border-left: 2.5rem solid #ffffff;
   border-bottom: 1.5rem solid transparent;
-  background: transparent;
+  background-color: transparent;
   border-radius: 0.2rem;
 }
 
@@ -320,7 +320,7 @@ input {
   left: 2rem;
   font-size: 1.4rem;
   line-height: 1.14;
-  background: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 1.6rem;
   padding: 0.5rem 1.2rem;
   display: flex;
@@ -342,7 +342,7 @@ input {
   padding: 1.8rem;
   padding-left: 6.4rem;
   font-weight: 700;
-  background: rgba(255, 255, 255, 0.07);
+  background-color: rgba(255, 255, 255, 0.07);
   border-radius: 1.6rem;
 }
 
@@ -358,7 +358,7 @@ input {
 }
 
 .trending__time {
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 1.6rem;
   font-weight: normal;
   font-size: 1.4rem;
@@ -442,8 +442,10 @@ input {
   z-index: 0;
 }
 
-.aside {
+.aside__main {
+  padding-left: 2.4rem;
   padding-right: 5.9rem;
+  background-color: #17161b;
 }
 
 .aside__title {
@@ -504,7 +506,6 @@ input {
   border-radius: 1.6rem;
   font-weight: 700;
   padding: 1.9rem;
-  margin-bottom: 3rem;
 }
 
 .aside__views {
@@ -536,16 +537,13 @@ input {
 }
 
 .aside__bottom {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 43rem;
-  padding: 2.5rem 2.4rem 2rem;
+  padding: 2.5rem 0 2rem 2.4rem;
   background-color: rgba(255, 255, 255, 0.02);
+  margin-right: 5.9rem;
 }
 
 .aside__favorite {
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 .aside__favorite-text {
