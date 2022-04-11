@@ -106,7 +106,7 @@ input {
     'my-aside my-main my-main'
     'my-aside my-main my-main';
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: 8rem 0;
+  gap: 3rem 0;
 }
 
 .grid-init {
@@ -114,6 +114,10 @@ input {
   max-width: 144rem;
   padding: 3rem 2.4rem 0;
   margin: auto;
+}
+
+.header {
+  box-shadow: 0 0.4rem 1rem rgba(255, 255, 255, 0.07);
 }
 
 .header__wrap {
@@ -190,6 +194,10 @@ input {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
+}
+
+.main-display {
+  padding-top: 5rem;
 }
 
 .main-display__trailer {
@@ -429,10 +437,10 @@ input {
   margin-right: 0.4rem;
 }
 
-/* .main-display__trailer:after,
-.trending__item:after,
-.popular__item:after, */
-.aside__item:after {
+/* .main-display__trailer::after,
+.trending__item::after,
+.popular__item::after, */
+.aside__item::after {
   content: '';
   position: absolute;
   display: block;
@@ -443,7 +451,23 @@ input {
 }
 
 .aside {
+  position: relative;
   padding-right: 3.6rem;
+}
+
+.aside::after {
+  content: url('../img/triangle.svg');
+  position: absolute;
+  top: 10.7rem;
+  right: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.6rem;
+  background-color: #fcfcfe;
+  border-radius: 2rem;
+  cursor: pointer;
 }
 
 .aside__wrap {
@@ -452,10 +476,9 @@ input {
 }
 
 .aside__top {
-  padding-left: 2.4rem;
-  padding-right: 2.3rem;
-  padding-bottom: 4rem;
+  padding: 5rem 2.3rem 4rem 2.4rem;
   background-color: #17161b;
+  border-right: 0.1rem solid #1c1b1f;
 }
 
 .aside__title {
@@ -525,9 +548,22 @@ input {
   z-index: 5;
 }
 
-.aside__footer {
+
+.aside__footer,
+.aside__footer-bottom {
   position: relative;
   z-index: 5;
+}
+
+.aside__footer-bottom::before {
+  content: '';
+  position: absolute;
+  top: -25%;
+  left: 0;
+  transform: translate(0, 50%);
+  width: 6.5rem;
+  height: 0.1rem;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .aside__item-name {
@@ -563,7 +599,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-  padding-right: 5rem;
+  padding-right: 7rem;
 }
 
 .aside__genre {
