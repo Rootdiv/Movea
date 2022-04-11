@@ -248,7 +248,7 @@ input {
   z-index: 5;
 }
 
-.button-paly {
+.button-play {
   width: 0;
   height: 0;
   padding: 0;
@@ -381,7 +381,7 @@ input {
   left: 7%;
 }
 
-.button-play__wrap.small .button-paly {
+.button-play__wrap.small .button-play {
   border-top: 0.5rem solid transparent;
   border-left: 1rem solid #ffffff;
   border-bottom: 0.5rem solid transparent;
@@ -411,7 +411,7 @@ input {
   left: 9%;
 }
 
-.button-play__wrap.small-plus .button-paly {
+.button-play__wrap.small-plus .button-play {
   border-top: 0.3rem solid transparent;
   border-left: 0.6rem solid #ffffff;
   border-bottom: 0.3rem solid transparent;
@@ -642,6 +642,31 @@ input {
   text-align: center;
   margin-right: 0.5rem;
   background-color: #2b2a2f;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3rem 0;
+  z-index: 100;
+}
+
+.modal__inner {
+  width: 100rem;
+  height: 60rem;
+}
+
+.active {
+  display: flex;
 }
 
 /* сетка */
