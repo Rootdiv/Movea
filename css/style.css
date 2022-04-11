@@ -112,7 +112,7 @@ input {
 .grid-init {
   position: relative;
   max-width: 144rem;
-  padding: 3rem 2.4rem 4rem 0;
+  padding: 3rem 2.4rem 0;
   margin: auto;
 }
 
@@ -442,9 +442,19 @@ input {
   z-index: 0;
 }
 
-.aside__main {
+.aside {
+  padding-right: 3.6rem;
+}
+
+.aside__wrap {
+  background-color: rgba(255, 255, 255, 0.02);
+  margin-left: -2.4rem;
+}
+
+.aside__top {
   padding-left: 2.4rem;
-  padding-right: 5.9rem;
+  padding-right: 2.3rem;
+  padding-bottom: 4rem;
   background-color: #17161b;
 }
 
@@ -533,13 +543,10 @@ input {
 
 .aside__item:nth-child(3) {
   margin-top: 3rem;
-  margin-bottom: 4rem;
 }
 
 .aside__bottom {
   padding: 2.5rem 0 2rem 2.4rem;
-  background-color: rgba(255, 255, 255, 0.02);
-  margin-right: 5.9rem;
 }
 
 .aside__favorite {
